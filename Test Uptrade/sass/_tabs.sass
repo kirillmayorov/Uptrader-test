@@ -1,0 +1,64 @@
+.tabs
+  background: url('../img/main-bg.jpg') center no-repeat
+  width: 100%
+  min-height: 100vh
+  max-height: 960px
+  padding-bottom: 20px
+  opacity: 0
+  font-family: 'PFDinTextPro'
+  &-headers
+    display: flex
+    margin-bottom: 40px
+    &::after
+      content: ''
+      position: absolute
+      top: 80px //высота класса .tabs-header
+      left: 0
+      width: 100vw
+      height: 1px
+      background-color: #9a9a9a
+      z-index: 1
+  &-header
+    display: flex
+    width: 33%
+    height: 80px
+    justify-content: center
+    align-items: center
+    color: #2e2e2e
+    font-size: 20px
+    font-weight: 300
+    &:hover
+      cursor: pointer
+      color: #009e82
+      transition: .2s
+      text-decoration: none
+    &_active
+      border-bottom: 2px solid #009e82
+      color: #009e82
+      font-weight: 400
+      z-index: 10
+  &-content
+    width: 60%
+  &-panel
+    display: none
+    color: #2e2e2e
+    &_active
+      display: block
+    &__list
+      margin-bottom: 40px
+      li
+        position: relative
+        margin:
+          left: 25px
+          bottom: 10px
+      span
+        position: absolute
+        left: -25px
+        top: 50%
+        transform: translate(0, -50%)
+        font-weight: 300
+        color: #009e82
+        font-size: 26px
+  &_visible
+    opacity: 1
+    transition: 4s
